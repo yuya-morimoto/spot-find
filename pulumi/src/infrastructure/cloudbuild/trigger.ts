@@ -1,8 +1,9 @@
 import * as gcp from "@pulumi/gcp";
+import { Account, IAMMember } from "@pulumi/gcp/serviceaccount";
 import { constant } from "../../constant";
 import { getRepositoryName } from "../../util";
 
-export const generatePullRequestTrigger = () => {
+export const generatePullRequestTrigger = (serviceAccount: Account) => {
   return new gcp.cloudbuild.Trigger("pull-request-trigger", {
     filename: "ci/pull-request.yaml",
     description: constant.description,
@@ -10,13 +11,10 @@ export const generatePullRequestTrigger = () => {
     github: {
       name: constant.repositoryName,
       owner: constant.gitUserName,
-      push: {
+      pullRequest: {
         branch: `^${getRepositoryName()}$`,
       },
     },
-    triggerTemplate: {
-      branchName: getRepositoryName(),
-      repoName: constant.repositoryName,
-    },
+    serviceAccount: serviceAccount.id,
   });
 };

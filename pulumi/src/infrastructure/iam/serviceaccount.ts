@@ -42,11 +42,11 @@ export const generateCloudBuildServiceAccount = () => {
 
   return {
     serviceAccount: serviceAccount,
-    role: {
+    role: [
       cloudBuildServiceAccount,
       computeAdmin,
       secretAccessor,
       storageAdmin,
-    },
+    ],
   };
 };
