@@ -7,5 +7,14 @@ export const cloudBuildFlow = () => {
     infrastructure.cloudBuild.trigger.generatePullRequestTrigger(
       cloudBuildServiceAccount.serviceAccount
     );
-  return { cloudBuildServiceAccount, cloudBuildPullRequestTrigger };
+  const cloudBuildPushTrigger =
+    infrastructure.cloudBuild.trigger.generatePushTrigger(
+      cloudBuildServiceAccount.serviceAccount
+    );
+
+  return {
+    cloudBuildServiceAccount,
+    cloudBuildPullRequestTrigger,
+    cloudBuildPushTrigger,
+  };
 };
