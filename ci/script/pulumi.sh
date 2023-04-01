@@ -8,6 +8,8 @@ set -e -x
 curl -L https://get.pulumi.com/ | bash
 export PATH=$PATH:$HOME/.pulumi/bin
 
+echo ls
+
 # change directory
 cd pulumi
 

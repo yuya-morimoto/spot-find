@@ -1,3 +1,5 @@
+setup:
+	npm install
 pulumi-stack-ls:
 	pulumi stack ls
 pulumi-select-dev:
