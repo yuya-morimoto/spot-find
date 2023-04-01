@@ -18,11 +18,11 @@ npm install
 pulumi login
 
 # select the appropriate stack.
-if [ "$PROJECT_ID" == *dev* ]; then
+if [[ "$PROJECT_ID" == *dev* ]]; then
     pulumi stack select dev
-    elif [ "$PROJECT_ID" == *stg* ]; then
+    elif [[ "$PROJECT_ID" == *stg* ]]; then
     pulumi stack select stg
-    elif [ "$PROJECT_ID" == *prd* ]; then
+    elif [[ "$PROJECT_ID" == *prd* ]]; then
     pulumi stack select prd
 else
     echo "PROJECT_ID:$PROJECT_ID"
