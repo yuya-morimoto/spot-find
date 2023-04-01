@@ -12,5 +12,5 @@ steps:
 
 availableSecrets:
   secretManager:
-    - versionName: projects/$PROJECT_ID/secrets/mySecret/versions/latest
+    - versionName: projects/$PROJECT_ID/secrets/PULUMI_ACCESS_TOKEN/versions/latest
       env: "PULUMI_ACCESS_TOKEN"
