@@ -1,13 +1,12 @@
 import * as gcp from "@pulumi/gcp";
 import * as pulumi from "@pulumi/pulumi";
 import { constant } from "../../constant";
-import { generateRandomStringName } from "../../util";
 
 const projectId = gcp.config.project || "";
 
 export const generateCloudBuildServiceAccount = () => {
   const serviceAccount = new gcp.serviceaccount.Account(
-    generateRandomStringName("cloud-build-service-account"),
+    "cloud-build-service-account",
     {
       accountId: "cloud-build-service-account",
       description: constant.description,
