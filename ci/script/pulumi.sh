@@ -1,7 +1,7 @@
 #!/bin/bash
 
 # argument command(up, preview)
-COMMAND=${1:-preview}
+COMMAND="$1"
 
 # exit if a command returns a non-zero exit code and also print the commands and their args as they are executed.
 set -e -x
@@ -35,9 +35,9 @@ fi
 pulumi refresh --yes
 
 # execute pulumi command up or preview or destroy
-if ["$COMMAND" == "preview"]; then
+if [ "$COMMAND" = "preview" ]; then
     pulumi preview
 fi
-if ["$COMMAND" == "up"]; then
+if [ "$COMMAND" = "up" ]; then
     pulumi up --yes
 fi
