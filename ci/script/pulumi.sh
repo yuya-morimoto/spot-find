@@ -32,7 +32,7 @@ else
 fi
 
 # synchronize pulumi refresh
-pulumi refresh
+pulumi refresh --yes
 
 # execute pulumi command up or preview or destroy
 if ["$COMMAND" == "preview"]; then
