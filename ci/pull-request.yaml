@@ -7,5 +7,10 @@ steps:
     name: "docker-pulumi-cli"
     entrypoint: "pulumi"
     args: ["preview"]
-    secretEnv: ["$PULUMI_ACCESS_TOKEN"]
+    secretEnv: ["PULUMI_ACCESS_TOKEN"]
     waitFor: ["docker-build-pulumi-cli"]
+
+availableSecrets:
+  secretManager:
+    - versionName: projects/$PROJECT_ID/secrets/mySecret/versions/latest
+      env: "PULUMI_ACCESS_TOKEN"
