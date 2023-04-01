@@ -1,5 +1,8 @@
 #!/bin/bash
 
+# argument command(up, preview)
+COMMAND="$1"
+
 # exit if a command returns a non-zero exit code and also print the commands and their args as they are executed.
 set -e -x
 
@@ -25,8 +28,19 @@ if [[ "$PROJECT_ID" == *dev* ]]; then
     elif [[ "$PROJECT_ID" == *prd* ]]; then
     pulumi stack select prd
 else
-    echo "PROJECT_ID:$PROJECT_ID"
     exit 1
 fi
 
-pulumi preview
+# confiure
+pulumi config set gcp:project "$PROJECT_ID"
+
+# synchronize pulumi refresh
+pulumi refresh --yes
+
+# execute pulumi command up or preview or destroy
+if [ "$COMMAND" = "preview" ]; then
+    pulumi preview
+fi
+if [ "$COMMAND" = "up" ]; then
+    pulumi up --yes
+fi
