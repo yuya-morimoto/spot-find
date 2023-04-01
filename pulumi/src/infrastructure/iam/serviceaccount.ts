@@ -13,15 +13,6 @@ export const generateCloudBuildServiceAccount = () => {
     }
   );
 
-  const cloudBuildServiceAccount = new gcp.projects.IAMMember(
-    "cloud-build-service-account",
-    {
-      project: projectId,
-      role: "roles/cloudbuild.builds.builder",
-      member: pulumi.interpolate`serviceAccount:${serviceAccount.email}`,
-    }
-  );
-
   const computeAdmin = new gcp.projects.IAMMember("compute-admin", {
     project: projectId,
     role: "roles/compute.admin",
@@ -40,20 +31,8 @@ export const generateCloudBuildServiceAccount = () => {
     member: pulumi.interpolate`serviceAccount:${serviceAccount.email}`,
   });
 
-  const loggingAdmin = new gcp.projects.IAMMember("logging-admin", {
-    project: projectId,
-    role: "roles/logging.admin",
-    member: pulumi.interpolate`serviceAccount:${serviceAccount.email}`,
-  });
-
   return {
     serviceAccount: serviceAccount,
-    role: [
-      cloudBuildServiceAccount,
-      computeAdmin,
-      secretAccessor,
-      storageAdmin,
-      loggingAdmin,
-    ],
+    role: [computeAdmin, secretAccessor, storageAdmin],
   };
 };
