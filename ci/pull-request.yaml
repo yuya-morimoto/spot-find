@@ -5,9 +5,10 @@ steps:
     entrypoint: /bin/sh
     args:
       - "-c"
-      - "chmod +x ./ci/script/pulumi.sh && ./ci/script/pulumi.sh"
+      - "chmod +x ./ci/script/pulumi.sh && ./ci/script/pulumi.sh preview"
     env:
       - "PROJECT_ID=$PROJECT_ID"
+      - "BUILD_TYPE=$_BUILD_TYPE"
     secretEnv: ["PULUMI_ACCESS_TOKEN"]
 
 availableSecrets:

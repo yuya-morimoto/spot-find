@@ -1,5 +1,8 @@
 #!/bin/bash
 
+# argument command(up, preview)
+COMMAND=${1:-preview}
+
 # exit if a command returns a non-zero exit code and also print the commands and their args as they are executed.
 set -e -x
 
@@ -7,8 +10,6 @@ set -e -x
 # pulumi
 curl -L https://get.pulumi.com/ | bash
 export PATH=$PATH:$HOME/.pulumi/bin
-
-echo ls
 
 # change directory
 cd pulumi
@@ -27,8 +28,16 @@ if [[ "$PROJECT_ID" == *dev* ]]; then
     elif [[ "$PROJECT_ID" == *prd* ]]; then
     pulumi stack select prd
 else
-    echo "PROJECT_ID:$PROJECT_ID"
     exit 1
 fi
 
-pulumi preview
+# synchronize pulumi refresh
+pulumi refresh
+
+# execute pulumi command up or preview or destroy
+if ["$COMMAND" == "preview"]; then
+    pulumi preview
+fi
+if ["$COMMAND" == "up"]; then
+    pulumi up --yes
+fi
