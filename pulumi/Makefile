@@ -6,3 +6,5 @@ pulumi-select-dev:
 	pulumi stack select dev
 pulumi-select-stg:
 	pulumi stack select stg
+pulumi-select-prd:
+	pulumi stack select prd
