@@ -7,9 +7,12 @@ const vpc = new gcp.compute.Network(`${constant.repositoryName}-main-vpc`, {
   autoCreateSubnetworks: false,
 });
 
-const privateSubnet = new gcp.compute.Subnetwork(`private-subnet`, {
-  ipCidrRange: "10.0.1.0/24",
-  region: constant.region["asia-northeast1"],
-  network: vpc.id,
-  description: constant.description,
-});
+const privateSubnet = new gcp.compute.Subnetwork(
+  `${constant.repositoryName}-private-subnet`,
+  {
+    ipCidrRange: "10.0.1.0/24",
+    region: constant.region["asia-northeast1"],
+    network: vpc.id,
+    description: constant.description,
+  }
+);
