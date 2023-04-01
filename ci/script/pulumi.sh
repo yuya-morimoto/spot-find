@@ -44,3 +44,6 @@ fi
 if [ "$COMMAND" = "up" ]; then
     pulumi up --yes
 fi
+if [ "$COMMAND" = "destroy" ]; then
+    pulumi destroy --yes
+fi
