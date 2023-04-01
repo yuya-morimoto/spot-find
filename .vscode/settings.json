@@ -1,3 +1,11 @@
 {
-  "cSpell.words": ["pulumi"]
+  "cSpell.words": [
+    "cloudbuild",
+    "morimoto",
+    "pulumi",
+    "serviceaccount",
+    "Subnetwork",
+    "Subnetworks",
+    "yuya"
+  ]
 }
