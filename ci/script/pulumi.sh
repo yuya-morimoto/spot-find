@@ -8,6 +8,9 @@ set -e -x
 curl -L https://get.pulumi.com/ | bash
 export PATH=$PATH:$HOME/.pulumi/bin
 
+# change directory
+cd pulumi
+
 # restore npm dependencies for our infra app.
 npm install
 
