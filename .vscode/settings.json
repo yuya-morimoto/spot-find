@@ -3,6 +3,7 @@
     "cloudbuild",
     "morimoto",
     "pulumi",
+    "secretmanager",
     "serviceaccount",
     "Subnetwork",
     "Subnetworks",
