@@ -1,7 +1,7 @@
 steps:
   - id: docker-build-pulumi-cli
     name: "gcr.io/cloud-builders/docker"
-    args: ["build", "-t", "docker-pulumi-cli", "../pulumi"]
+    args: ["build", "-t", "docker-pulumi-cli", "-f", "../pulumi/Dockerfile"]
 
   - id: pulumi-preview
     name: "docker-pulumi-cli"
