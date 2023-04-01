@@ -1,6 +1,7 @@
 steps:
   # https://www.pulumi.com/docs/guides/continuous-delivery/google-cloud-build/
-  - name: "gcr.io/cloud-builders/npm"
+  - id: pulumi-preview
+    name: "gcr.io/cloud-builders/npm"
     entrypoint: /bin/sh
     args:
       - "-c"
@@ -9,13 +10,6 @@ steps:
       - "PULUMI_ACCESS_TOKEN=$$PULUMI_ACCESS_TOKEN"
       - "PROJECT_ID=$PROJECT_ID"
     secretEnv: ["PULUMI_ACCESS_TOKEN"]
-
-  - id: pulumi-preview
-    name: "docker-pulumi-cli"
-    entrypoint: "pulumi"
-    args: ["preview"]
-    secretEnv: ["PULUMI_ACCESS_TOKEN"]
-    waitFor: ["docker-build-pulumi-cli"]
 
 availableSecrets:
   secretManager:
