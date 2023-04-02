@@ -16,7 +16,7 @@ export const generatePullRequestTrigger = (serviceAccount: Account) => {
       },
     },
     serviceAccount: serviceAccount.id,
-    includeBuildLogs: "INCLUDE_BUILD_LOGS_WITH_STATUS",
+    // includeBuildLogs: "INCLUDE_BUILD_LOGS_WITH_STATUS",
   });
 };
 
