@@ -39,5 +39,5 @@ if [ "$COMMAND" = "preview" ]; then
     pulumi preview
 fi
 if [ "$COMMAND" = "up" ]; then
-    pulumi up --yes
+    pulumi up --yes --refresh
 fi
