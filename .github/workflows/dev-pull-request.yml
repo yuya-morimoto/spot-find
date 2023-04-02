@@ -1,15 +1,20 @@
-name: Pulumi
+name: Dev-PR Pulumi Preview
+
 on:
-  - pull_request
+  pull_request:
+    branches:
+      - dev
+
 jobs:
   preview:
     name: Preview
     runs-on: ubuntu-latest
     steps:
       - name: Install Pulumi
-        uses: pulumi/action-install-pulumi@v1
+        uses: pulumi/actions@v4
         with:
-          pulumi-version: "3.18.1"
+          pulumi-version: 3.3.0
+
       - name: Deploy to GCP
         env:
           GOOGLE_PROJECT_ID: ${{ secrets.GCP_PROJECT_ID_DEV }}
@@ -17,4 +22,4 @@ jobs:
         run: |
           pulumi login gcp --use-service-account
           pulumi stack select dev
-          pulumi preview
+          make preview
