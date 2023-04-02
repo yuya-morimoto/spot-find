@@ -8,10 +8,10 @@ on:
 jobs:
   preview:
     name: Preview
-    runs-on: ubuntu-latest
     steps:
+      - uses: actions/checkout@v2
+      - uses: pulumi/actions@v4
       - name: Install Pulumi
-        uses: pulumi/actions@v4
         with:
           command: preview
           stack-name: dev
