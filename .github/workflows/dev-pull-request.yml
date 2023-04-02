@@ -16,7 +16,7 @@ jobs:
       - name: CheckOut
         uses: actions/checkout@v3
 
-      - name: SetUp Node
+      - name: Node SetUp
         uses: actions/setup-node@v3
         with:
           node-version: 16
@@ -29,16 +29,13 @@ jobs:
         with:
           credentials_json: ${{ secrets.GCP_SA_KEY_DEV }}
 
-      - name: SetUp Pulumi
+      - name: Install Pulumi
         uses: pulumi/actions@v3
         with:
+          command: preview
+          stack-name: find-spot-pulumi/dev
           comment-on-pr: true
+          github-token: ${{ secrets.GITHUB_TOKEN }}
         env:
           GOOGLE_PROJECT_ID: ${{ secrets.GCP_PROJECT_ID_DEV }}
           PULUMI_ACCESS_TOKEN: ${{ secrets.PULUMI_ACCESS_TOKEN }}
-
-      - name: Preview Pulumi
-        run: |
-          pulumi config set gcp:project "$PROJECT_ID"
-          pulumi stack ls
-          pulumi stack select dev
