@@ -15,7 +15,6 @@ jobs:
         with:
           command: preview
           stack-name: dev
-          pulumi-version: 3.3.0
           comment-on-pr: true
           work-dir: ./pulumi/
         env:
