@@ -40,13 +40,20 @@ export const generateCloudBuildServiceAccount = () => {
     member: pulumi.interpolate`serviceAccount:${serviceAccount.email}`,
   });
 
+  const loggingWriter = new gcp.projects.IAMMember("logging-writer", {
+    project: projectId,
+    role: "roles/logging.logWriter",
+    member: pulumi.interpolate`serviceAccount:${serviceAccount.email}`,
+  });
+
   return {
     serviceAccount: serviceAccount,
-    role: {
+    role: [
       cloudBuildServiceAccount,
       computeAdmin,
       secretAccessor,
       storageAdmin,
-    },
+      loggingWriter,
+    ],
   };
 };

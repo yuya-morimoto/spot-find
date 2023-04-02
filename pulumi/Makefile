@@ -1,5 +1,7 @@
+SHELL := /bin/bash
+
 setup:
-	npm install
+	source ~/.nvm/nvm.sh && nvm use && npm install
 pulumi-stack-ls:
 	pulumi stack ls
 pulumi-select-dev:

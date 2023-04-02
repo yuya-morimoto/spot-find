@@ -1,1 +1,1 @@
-export * from "./getRepositoryName";
+export * from "./getBranchName";
