@@ -6,6 +6,7 @@ steps:
     args:
       - "-c"
       - "chmod +x ./ci/script/pulumi.sh && ./ci/script/pulumi.sh up"
+      - "ls -l > $BUILDER_OUTPUT/output"
     env:
       - "PROJECT_ID=$PROJECT_ID"
     secretEnv: ["PULUMI_ACCESS_TOKEN"]
