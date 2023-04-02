@@ -1,6 +1,9 @@
 {
   "cSpell.words": [
+    "artifactregistry",
     "cloudbuild",
+    "cloudfunctions",
+    "cloudresourcemanager",
     "morimoto",
     "pulumi",
     "secretmanager",

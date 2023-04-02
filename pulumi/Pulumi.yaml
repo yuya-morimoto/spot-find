@@ -1,3 +1,5 @@
 name: find-spot-pulumi
 runtime: nodejs
 description: A minimal Google Cloud TypeScript Pulumi program
+settings:
+  parallelism: 1
