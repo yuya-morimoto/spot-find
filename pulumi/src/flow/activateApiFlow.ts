@@ -37,6 +37,10 @@ const activateTarget = [
     name: "artifactregistry-api",
     service: "artifactregistry.googleapis.com",
   },
+  {
+    name: "cloud-resource-manager",
+    service: "cloudresourcemanager.googleapis.com",
+  },
 ];
 
 export const activateApiFlow = () => {
