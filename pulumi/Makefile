@@ -1,5 +1,7 @@
 SHELL := /bin/bash
 
+preview:
+	pulumi preview
 setup:
 	source ~/.nvm/nvm.sh && nvm use && npm install
 pulumi-stack-ls:
