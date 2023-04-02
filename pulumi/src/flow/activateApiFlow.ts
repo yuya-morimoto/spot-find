@@ -2,16 +2,16 @@ import * as gcp from "@pulumi/gcp";
 
 const activateTarget = [
   {
+    name: "compute-api",
+    service: "compute.googleapis.com",
+  },
+  {
     name: "cloud-functions-api",
     service: "cloudfunctions.googleapis.com",
   },
   {
     name: "logging-api",
     service: "logging.googleapis.com",
-  },
-  {
-    name: "compute-api",
-    service: "compute.googleapis.com",
   },
   {
     name: "pubsub-api",
@@ -41,8 +41,19 @@ const activateTarget = [
 
 export const activateApiFlow = () => {
   return activateTarget.map(({ name, service }) => {
-    return new gcp.projects.Service(name, {
-      service,
-    });
+    return new gcp.projects.Service(
+      name,
+      {
+        disableDependentServices: true,
+        service,
+      },
+      {
+        customTimeouts: {
+          create: "30m",
+          update: "30m",
+          delete: "30m",
+        },
+      }
+    );
   });
 };

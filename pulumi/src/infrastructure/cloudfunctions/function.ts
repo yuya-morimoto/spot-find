@@ -13,6 +13,7 @@ export const generateCloudBuildSlackNotifierFunction = (
     {
       description: constant.description,
       runtime: "python311",
+      region: constant.region["asia-northeast1"],
       availableMemoryMb: 128,
       sourceArchiveBucket: bucket.name,
       sourceArchiveObject: bucketObject.name,
