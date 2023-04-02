@@ -12,16 +12,18 @@ jobs:
       - name: CheckOut
         uses: actions/checkout@v3
 
-      - name: SetUp
+      - name: Node SetUp
         working-directory: ./pulumi
         uses: actions/setup-node@v3
         with:
           node-version-file: ./pulumi/package.json
+
+      - name: Npm Install
         run: npm install
 
       - name: Install Pulumi
         working-directory: ./pulumi
-        use: pulumi/actions@v3
+        uses: pulumi/actions@v3
         with:
           command: preview
           stack-name: dev
