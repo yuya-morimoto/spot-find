@@ -24,6 +24,12 @@ jobs:
       - name: Npm Install
         run: npm install
 
+
+      - name: Authenticate to Google Cloud
+        uses: `google-github-actions/auth@v1'
+        with:
+        credentials_json: '${{ secrets.GCP_SA_KEY_DEV }}'
+
       - name: Install Pulumi
         uses: pulumi/actions@v3
         with:
