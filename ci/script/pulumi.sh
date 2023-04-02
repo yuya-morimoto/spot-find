@@ -35,7 +35,7 @@ fi
 pulumi config set gcp:project "$PROJECT_ID"
 
 # synchronize pulumi refresh
-pulumi refresh --yes
+# pulumi refresh --yes
 
 # execute pulumi command up or preview or destroy
 if [ "$COMMAND" = "preview" ]; then
