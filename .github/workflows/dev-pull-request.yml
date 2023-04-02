@@ -33,7 +33,7 @@ jobs:
         uses: pulumi/actions@v3
         with:
           command: preview
-          stack-name: dev
+          stack-name: find-spot-pulumi/dev
           comment-on-pr: true
         env:
           GOOGLE_PROJECT_ID: ${{ secrets.GCP_PROJECT_ID_DEV }}
