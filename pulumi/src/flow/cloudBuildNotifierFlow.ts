@@ -1,10 +1,12 @@
 import * as infrastructure from "../infrastructure";
 
-export const cloudBuildNotifierFlow = () => {
+export const cloudBuildNotifierFlow = async () => {
   const topic = infrastructure.pubSub.generateCloudBuildPubSub();
   const bucket = infrastructure.storage.generatedCloudFunctionsBucket();
+
   const bucketObject =
-    infrastructure.storage.generateNotifierBucketObject(bucket);
+    await infrastructure.storage.generateNotifierBucketObject(bucket);
+
   const cloudFunctions =
     infrastructure.cloudFunctions.generateCloudBuildSlackNotifierFunction(
       topic,
