@@ -38,7 +38,7 @@ jobs:
           command: preview
           stack-name: dev
           work-dir: pulumi
-          comment-on-pr: true
+          # comment-on-pr: true
           github-token: ${{ secrets.GITHUB_TOKEN }}
         env:
           GOOGLE_PROJECT_ID: ${{ secrets.GCP_PROJECT_ID_DEV }}
