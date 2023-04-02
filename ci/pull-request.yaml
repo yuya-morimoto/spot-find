@@ -9,6 +9,8 @@ steps:
     env:
       - "PROJECT_ID=$PROJECT_ID"
     secretEnv: ["PULUMI_ACCESS_TOKEN"]
+options:
+  logging: "CLOUD_LOGGING_ONLY"
 
 availableSecrets:
   secretManager:

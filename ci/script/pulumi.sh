@@ -34,16 +34,10 @@ fi
 # confiure
 pulumi config set gcp:project "$PROJECT_ID"
 
-# synchronize pulumi refresh
-pulumi refresh --yes
-
 # execute pulumi command up or preview or destroy
 if [ "$COMMAND" = "preview" ]; then
     pulumi preview
 fi
 if [ "$COMMAND" = "up" ]; then
     pulumi up --yes
-fi
-if [ "$COMMAND" = "destroy" ]; then
-    pulumi destroy --yes
 fi
