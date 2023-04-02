@@ -16,7 +16,8 @@ jobs:
       - name: Node SetUp
         uses: actions/setup-node@v3
         with:
-          node-version-file: ./pulumi/package.json
+          node-version: 16
+          cache: "npm"
 
       - name: Npm Install
         working-directory: ./pulumi
