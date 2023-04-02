@@ -33,12 +33,12 @@ jobs:
         uses: pulumi/actions@v3
         with:
           comment-on-pr: true
+        env:
+          GOOGLE_PROJECT_ID: ${{ secrets.GCP_PROJECT_ID_DEV }}
+          PULUMI_ACCESS_TOKEN: ${{ secrets.PULUMI_ACCESS_TOKEN }}
 
       - name: Preview Pulumi
         run: |
           pulumi config set gcp:project "$PROJECT_ID"
           pulumi stack ls
           pulumi stack select dev
-        env:
-          GOOGLE_PROJECT_ID: ${{ secrets.GCP_PROJECT_ID_DEV }}
-          PULUMI_ACCESS_TOKEN: ${{ secrets.PULUMI_ACCESS_TOKEN }}
