@@ -52,6 +52,15 @@ export const generateCloudBuildServiceAccount = () => {
     member: pulumi.interpolate`serviceAccount:${serviceAccount.email}`,
   });
 
+  const cloudFunctionsAdmin = new gcp.projects.IAMMember(
+    "cloud-functions-admin",
+    {
+      project: projectId,
+      role: "roles/cloudfunctions.admin",
+      member: pulumi.interpolate`serviceAccount:${serviceAccount.email}`,
+    }
+  );
+
   return {
     serviceAccount: serviceAccount,
     role: [
@@ -61,6 +70,7 @@ export const generateCloudBuildServiceAccount = () => {
       storageAdmin,
       loggingWriter,
       pubSubAdmin,
+      cloudFunctionsAdmin,
     ],
   };
 };
