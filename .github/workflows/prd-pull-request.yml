@@ -3,7 +3,7 @@ name: Pulumi Preview (Prd PullRequest)
 on:
   pull_request:
     branches:
-      - prd
+      - main
 
 jobs:
   preview:
