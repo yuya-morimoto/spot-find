@@ -1,9 +1,9 @@
-name: Pulumi Preview (Dev PullRequest)
+name: Pulumi Preview (Prd PullRequest)
 
 on:
   pull_request:
     branches:
-      - dev
+      - main
 
 jobs:
   preview:
@@ -28,16 +28,16 @@ jobs:
         uses: google-github-actions/setup-gcloud@v0
         with:
           service_account_key: ${{ secrets.GCP_SA_KEY }}
-          project_id: ${{ env.GCP_PROJECT_ID_DEV }}
+          project_id: ${{ env.GCP_PROJECT_ID_PRD }}
           export_default_credentials: true
 
       - name: Preview Pulumi 🚀
         uses: pulumi/actions@v4
         with:
           command: preview
-          stack-name: dev
+          stack-name: prd
           work-dir: pulumi
           github-token: ${{ secrets.GITHUB_TOKEN }}
         env:
-          GOOGLE_PROJECT_ID: ${{ secrets.GCP_PROJECT_ID_DEV }}
+          GOOGLE_PROJECT_ID: ${{ secrets.GCP_PROJECT_ID_PRD }}
           PULUMI_ACCESS_TOKEN: ${{ secrets.PULUMI_ACCESS_TOKEN }}
