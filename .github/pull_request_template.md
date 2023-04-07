@@ -1,8 +1,13 @@
 ## Ticket / Issue Number
 
-チケット番号などを記入してください
+Issue アクションを指定してください
 
-No: #
+```
+サンプル: close, closes, closed, fix,
+fixes, fixed, resolve, resolves, resolved
+```
+
+Closes #
 
 ## What's changed
 
