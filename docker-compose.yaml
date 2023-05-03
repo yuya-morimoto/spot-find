@@ -1,0 +1,10 @@
+version: "3"
+services:
+  bff-zeus:
+    build:
+      context: ./bff/zeus
+      dockerfile: Dockerfile
+    ports:
+      - 3000:3000
+    volumes:
+      - ./bff/zeus/src:/app/src
