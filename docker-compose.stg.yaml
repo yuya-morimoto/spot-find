@@ -1,0 +1,11 @@
+version: "3"
+services:
+  bff-zeus-stg:
+    build:
+      context: ./bff/zeus
+      dockerfile: Dockerfile.stg
+    image: zeus-stg
+    ports:
+      - 3000:3000
+    volumes:
+      - ./bff/zeus/src:/app/src

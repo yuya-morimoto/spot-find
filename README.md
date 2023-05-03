@@ -29,6 +29,16 @@ brew install nvm
 make setup
 ```
 
+# Command
+
+```bash
+// 各種環境コンテナのビルド・起動
+docker-compose -f docker-compose.{env}.yaml up --build
+
+// 起動中のコンテナに入る
+docker exec -it {container-id} /bin/bash
+```
+
 # Author
 
 - 作成者: yuya-morimoto
