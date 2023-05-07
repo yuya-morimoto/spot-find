@@ -2,7 +2,10 @@
 
 # Requirement
 
-- Node, npm, apollo
+- Version 14.2 (14C18)
+- Swift5.x
+- Node, npm
+- apollo
 
 ```
 nvm install v18
