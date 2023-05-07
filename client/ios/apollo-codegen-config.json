@@ -1,0 +1,33 @@
+{
+  "schemaNamespace": "GraphQL",
+  "input": {
+    "operationSearchPaths": ["./apollo/graphql/*.graphql"],
+    "_comments": [
+      "=========================",
+      "==== .git管理外に設定 =====",
+      "========================="
+    ],
+    "schemaSearchPaths": ["./apollo/schema.json"]
+  },
+  "output": {
+    "testMocks": {
+      "none": {}
+    },
+    "schemaTypes": {
+      "_comments": [
+        "=========================",
+        "==== .git管理外に設定 =====",
+        "========================="
+      ],
+      "path": "./spot-find/Store/Dependency/Graphql",
+      "moduleType": {
+        "embeddedInTarget": {
+          "name": "spot-find"
+        }
+      }
+    },
+    "operations": {
+      "inSchemaModule": {}
+    }
+  }
+}
