@@ -2,14 +2,17 @@
 
 # Requirement
 
-- Node, npm, apollo
+- Version 14.2 (14C18)
+- Swift5.x
+- apollo
 
-```
+```bash
+# Apollo
 nvm install v18
 npm install -g apollo
 ```
 
-# Installation
+# SetUp
 
 ```
 projectを右クリック
