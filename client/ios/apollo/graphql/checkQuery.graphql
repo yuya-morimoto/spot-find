@@ -1,0 +1,6 @@
+query CheckQuery {
+  check {
+    id
+    message
+  }
+}
