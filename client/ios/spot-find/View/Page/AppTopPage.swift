@@ -12,20 +12,16 @@ import SwiftUI
 struct AppTopPage: View {
     @Dependency(\.zeusClient) var zeusClient
     
+    @ObservedObject var manager = LocationManager()
+    
     let store: AppStore
-
-    @State private var region = MKCoordinateRegion(
-        // サンプルに東京駅の座標指定
-        center: CLLocationCoordinate2D(latitude: 35.6809591,
-                                       longitude: 139.7673068),
-        latitudinalMeters: 750,
-        longitudinalMeters: 750
-    )
 
     var body: some View {
         WithViewStore(self.store) { viewStore in
             ZStack {
-                Map(coordinateRegion: $region)
+                Map(coordinateRegion: $manager.region,
+                    interactionModes: .all,
+                    showsUserLocation: true)
                     .ignoresSafeArea()
                 VStack {
                     Spacer()
@@ -34,11 +30,12 @@ struct AppTopPage: View {
                     }.buttonStyle(CapsuleButtonStyle(backgroundColor: .Primary, foregroundColor: .PrimaryContrast))
                     Button(EnvVariables.zeusEndpoint) {
                         zeusClient.fetch(query: GraphQL.CheckQuery()) { result in
-                          guard let data = try? result.get().data else { return }
+                            guard let data = try? result.get().data else { return }
                             print(data.check.id)
                             print(data.check.message)
                         }
                     }.buttonStyle(CapsuleButtonStyle(backgroundColor: .Primary, foregroundColor: .PrimaryContrast))
+                    //MyLocationSample()
                 }.padding()
             }
         }

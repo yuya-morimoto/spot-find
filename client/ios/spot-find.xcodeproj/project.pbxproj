@@ -32,6 +32,8 @@
 		9945071B29F43AB0003FC0E5 /* StatusState.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9945071A29F43AB0003FC0E5 /* StatusState.swift */; };
 		9947CB6629F4F6A100657867 /* SignUpPage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9947CB6529F4F6A100657867 /* SignUpPage.swift */; };
 		9947CB6C29F52F9F00657867 /* StatusAction.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9947CB6B29F52F9F00657867 /* StatusAction.swift */; };
+		994B9F962A3498DF003535AB /* LocationManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 994B9F952A3498DF003535AB /* LocationManager.swift */; };
+		994B9F982A349B3C003535AB /* MyLocationSample.swift in Sources */ = {isa = PBXBuildFile; fileRef = 994B9F972A349B3C003535AB /* MyLocationSample.swift */; };
 		9955C7192A025B6600ACCB45 /* Apollo in Frameworks */ = {isa = PBXBuildFile; productRef = 9955C7182A025B6600ACCB45 /* Apollo */; };
 		9955C7582A03950A00ACCB45 /* CheckQuery.graphql.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9955C7502A03950A00ACCB45 /* CheckQuery.graphql.swift */; };
 		9955C7592A03950A00ACCB45 /* Check.graphql.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9955C7532A03950A00ACCB45 /* Check.graphql.swift */; };
@@ -41,6 +43,9 @@
 		9955C75D2A03950A00ACCB45 /* GraphQL.graphql.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9955C7572A03950A00ACCB45 /* GraphQL.graphql.swift */; };
 		9955C75F2A03964500ACCB45 /* ZeusClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9955C75E2A03964500ACCB45 /* ZeusClient.swift */; };
 		9955C7622A039B2400ACCB45 /* EnvVariables.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9955C7612A039B2400ACCB45 /* EnvVariables.swift */; };
+		996B65B62A363BA600B0447A /* LocationState.swift in Sources */ = {isa = PBXBuildFile; fileRef = 996B65B52A363BA600B0447A /* LocationState.swift */; };
+		996B65B82A363BBA00B0447A /* LocationAction.swift in Sources */ = {isa = PBXBuildFile; fileRef = 996B65B72A363BBA00B0447A /* LocationAction.swift */; };
+		996B65BA2A363BC500B0447A /* LocationReducer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 996B65B92A363BC500B0447A /* LocationReducer.swift */; };
 		99B99E6E29FD0612007CDB0C /* AuthClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 99B99E6D29FD0612007CDB0C /* AuthClient.swift */; };
 		99B99E7529FD19B8007CDB0C /* WaitingEmailVerificationPage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 99B99E7429FD19B8007CDB0C /* WaitingEmailVerificationPage.swift */; };
 		99B99E7729FD6523007CDB0C /* StorePreview.swift in Sources */ = {isa = PBXBuildFile; fileRef = 99B99E7629FD6523007CDB0C /* StorePreview.swift */; };
@@ -106,6 +111,8 @@
 		9945071A29F43AB0003FC0E5 /* StatusState.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StatusState.swift; sourceTree = "<group>"; };
 		9947CB6529F4F6A100657867 /* SignUpPage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpPage.swift; sourceTree = "<group>"; };
 		9947CB6B29F52F9F00657867 /* StatusAction.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StatusAction.swift; sourceTree = "<group>"; };
+		994B9F952A3498DF003535AB /* LocationManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationManager.swift; sourceTree = "<group>"; };
+		994B9F972A349B3C003535AB /* MyLocationSample.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyLocationSample.swift; sourceTree = "<group>"; };
 		9955C7502A03950A00ACCB45 /* CheckQuery.graphql.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CheckQuery.graphql.swift; sourceTree = "<group>"; };
 		9955C7532A03950A00ACCB45 /* Check.graphql.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Check.graphql.swift; sourceTree = "<group>"; };
 		9955C7542A03950A00ACCB45 /* Query.graphql.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Query.graphql.swift; sourceTree = "<group>"; };
@@ -115,6 +122,9 @@
 		9955C75E2A03964500ACCB45 /* ZeusClient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ZeusClient.swift; sourceTree = "<group>"; };
 		9955C7602A03990000ACCB45 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
 		9955C7612A039B2400ACCB45 /* EnvVariables.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EnvVariables.swift; sourceTree = "<group>"; };
+		996B65B52A363BA600B0447A /* LocationState.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationState.swift; sourceTree = "<group>"; };
+		996B65B72A363BBA00B0447A /* LocationAction.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationAction.swift; sourceTree = "<group>"; };
+		996B65B92A363BC500B0447A /* LocationReducer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationReducer.swift; sourceTree = "<group>"; };
 		99B99E6D29FD0612007CDB0C /* AuthClient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthClient.swift; sourceTree = "<group>"; };
 		99B99E7429FD19B8007CDB0C /* WaitingEmailVerificationPage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WaitingEmailVerificationPage.swift; sourceTree = "<group>"; };
 		99B99E7629FD6523007CDB0C /* StorePreview.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StorePreview.swift; sourceTree = "<group>"; };
@@ -273,6 +283,7 @@
 				99B99E7329FD0F4B007CDB0C /* Dependency */,
 				990AF46F29F3EFF700EB6859 /* Auth */,
 				99B99E8A29FE4AD2007CDB0C /* Ui */,
+				996B65B42A363B8C00B0447A /* Location */,
 			);
 			path = Store;
 			sourceTree = "<group>";
@@ -371,6 +382,16 @@
 			path = Objects;
 			sourceTree = "<group>";
 		};
+		996B65B42A363B8C00B0447A /* Location */ = {
+			isa = PBXGroup;
+			children = (
+				996B65B52A363BA600B0447A /* LocationState.swift */,
+				996B65B72A363BBA00B0447A /* LocationAction.swift */,
+				996B65B92A363BC500B0447A /* LocationReducer.swift */,
+			);
+			path = Location;
+			sourceTree = "<group>";
+		};
 		99B99E7329FD0F4B007CDB0C /* Dependency */ = {
 			isa = PBXGroup;
 			children = (
@@ -396,6 +417,7 @@
 				9945071329F43507003FC0E5 /* ErrorText.swift */,
 				99B99E8729FE303A007CDB0C /* EmphasisText.swift */,
 				99B99EA129FECD42007CDB0C /* ProgressSpinner.swift */,
+				994B9F972A349B3C003535AB /* MyLocationSample.swift */,
 			);
 			path = Part;
 			sourceTree = "<group>";
@@ -426,6 +448,7 @@
 		99B99E9A29FE66E4007CDB0C /* Util */ = {
 			isa = PBXGroup;
 			children = (
+				994B9F952A3498DF003535AB /* LocationManager.swift */,
 				9945071629F43541003FC0E5 /* ErrorState.swift */,
 				9955C7612A039B2400ACCB45 /* EnvVariables.swift */,
 			);
@@ -616,18 +639,22 @@
 				9945071429F43507003FC0E5 /* ErrorText.swift in Sources */,
 				99B99E9029FE4C44007CDB0C /* UiReducer.swift in Sources */,
 				99B99EA029FECCFD007CDB0C /* BackgroundPage.swift in Sources */,
+				994B9F962A3498DF003535AB /* LocationManager.swift in Sources */,
 				9945071029F43440003FC0E5 /* ColorExtension.swift in Sources */,
 				990AF47129F3F06600EB6859 /* AuthReducer.swift in Sources */,
 				9955C7592A03950A00ACCB45 /* Check.graphql.swift in Sources */,
 				9955C75D2A03950A00ACCB45 /* GraphQL.graphql.swift in Sources */,
 				99B99E9229FE4D38007CDB0C /* TimeClient.swift in Sources */,
 				99B99E8E29FE4C38007CDB0C /* UiAction.swift in Sources */,
+				996B65BA2A363BC500B0447A /* LocationReducer.swift in Sources */,
 				990AF46E29F3EF8700EB6859 /* AuthAction.swift in Sources */,
+				994B9F982A349B3C003535AB /* MyLocationSample.swift in Sources */,
 				9945070B29F433FD003FC0E5 /* SignInPage.swift in Sources */,
 				990AF41529F3BA8800EB6859 /* spot_findApp.swift in Sources */,
 				99B99EA429FECDA9007CDB0C /* ProgressSpinnerObserve.swift in Sources */,
 				9947CB6629F4F6A100657867 /* SignUpPage.swift in Sources */,
 				9955C7622A039B2400ACCB45 /* EnvVariables.swift in Sources */,
+				996B65B82A363BBA00B0447A /* LocationAction.swift in Sources */,
 				99B99E7E29FD69AE007CDB0C /* SignUpSheetToggleButton.swift in Sources */,
 				9947CB6C29F52F9F00657867 /* StatusAction.swift in Sources */,
 				99B99E8029FD6CA3007CDB0C /* SignUpForm.swift in Sources */,
@@ -636,6 +663,7 @@
 				990AF47729F3F71E00EB6859 /* AppTopPage.swift in Sources */,
 				99B99E8429FD76BF007CDB0C /* StringExtension.swift in Sources */,
 				99B99E9829FE590C007CDB0C /* AppReducer.swift in Sources */,
+				996B65B62A363BA600B0447A /* LocationState.swift in Sources */,
 				99B99E8C29FE4B0D007CDB0C /* UiState.swift in Sources */,
 				9955C75B2A03950A00ACCB45 /* SchemaConfiguration.swift in Sources */,
 				990AF47529F3F65700EB6859 /* RootView.swift in Sources */,
@@ -807,6 +835,8 @@
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = "spot-find/Info.plist";
 				INFOPLIST_KEY_CFBundleDisplayName = "[DEV]";
+				INFOPLIST_KEY_NSLocationAlwaysAndWhenInUseUsageDescription = "位置情報を共有するために使用します";
+				INFOPLIST_KEY_NSLocationWhenInUseUsageDescription = "位置情報を共有するために使用します";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
@@ -839,6 +869,8 @@
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = "spot-find/Info.plist";
 				INFOPLIST_KEY_CFBundleDisplayName = "[DEV]";
+				INFOPLIST_KEY_NSLocationAlwaysAndWhenInUseUsageDescription = "位置情報を共有するために使用します";
+				INFOPLIST_KEY_NSLocationWhenInUseUsageDescription = "位置情報を共有するために使用します";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
@@ -1009,6 +1041,8 @@
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = "spot-find/Info.plist";
 				INFOPLIST_KEY_CFBundleDisplayName = "[DEV]";
+				INFOPLIST_KEY_NSLocationAlwaysAndWhenInUseUsageDescription = "位置情報を共有するために使用します";
+				INFOPLIST_KEY_NSLocationWhenInUseUsageDescription = "位置情報を共有するために使用します";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
