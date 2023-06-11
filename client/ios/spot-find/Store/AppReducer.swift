@@ -14,16 +14,19 @@ struct AppReducer: ReducerProtocol {
     struct State: Equatable {
         var auth: AuthReducer.State
         var ui: UiReducer.State
+        var location: LocationReducer.State
 
         init() {
             self.auth = AuthReducer.State()
             self.ui = UiReducer.State()
+            self.location = LocationReducer.State()
         }
     }
 
     enum Action: Equatable {
         case auth(AuthReducer.Action)
         case ui(UiReducer.Action)
+        case location(LocationReducer.Action)
     }
 
     var body: some ReducerProtocol<State, Action> {
@@ -32,6 +35,9 @@ struct AppReducer: ReducerProtocol {
         }
         Scope(state: \.ui, action: /Action.ui) {
             UiReducer()
+        }
+        Scope(state: \.location, action: /Action.location) {
+            LocationReducer()
         }
     }
 }
