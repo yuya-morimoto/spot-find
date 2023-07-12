@@ -5,7 +5,7 @@ Cloud は一旦 GCP で開始
 
 # Requirement
 
-- Infra
+- infra/kronos
 
   - Pulumi
     - `brew install pulumi/tap/pulumi`
