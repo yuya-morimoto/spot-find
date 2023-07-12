@@ -19,10 +19,10 @@
         "==== .git管理外に設定 =====",
         "========================="
       ],
-      "path": "./spot-find/Store/Dependency/Graphql",
+      "path": "./pulse-x/Store/Dependency/Graphql",
       "moduleType": {
         "embeddedInTarget": {
-          "name": "spot-find"
+          "name": "pulse-x"
         }
       }
     },
