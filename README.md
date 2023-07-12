@@ -1,6 +1,6 @@
-# Spot-Find
+# PulseX
 
-Iac(Pulumi) & MicroService & ServerLess & BFF Pattern で開発してみる<br>
+IaC(Pulumi) & MicroService & ServerLess & BFF Pattern で開発してみる<br>
 Cloud は一旦 GCP で開始
 
 # Requirement
@@ -53,8 +53,8 @@ docker exec -it {container-id} /bin/bash
 # Author
 
 - 作成者: yuya-morimoto
-- E-mail: yuya-morimoto@spot-find.jp
+- E-mail: yuya-morimoto@zero-hack.jp
 
 # License
 
-[MIT license](https://github.com/yuya-morimoto/spot-find/blob/main/LICENSE)
+[MIT license](https://github.com/yuya-morimoto/pulse-x/blob/main/LICENSE)
